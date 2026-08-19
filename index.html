@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SNS内製化支援サービス｜Film倶楽部株式会社</title>
+<meta name="description" content="累計4,002万回再生を生んだ制作チームが、御社のSNSを「社内で回せる」状態にします。月10,000円〜のSNS内製化支援サービス。">
+<meta property="og:title" content="SNS内製化支援サービス｜Film倶楽部株式会社">
+<meta property="og:description" content="SNSが伸びないのは、センスがないからではありません。「型」を知らないだけです。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#17150F;
+  --cream:#FFF7EC;
+  --white:#FFFFFF;
+  --yellow:#FFD43B;
+  --orange:#FF6B35;
+  --teal:#25C2C9;
+  --teal-lt:#D6F4F5;
+  --pink:#FF5C8A;
+  --pink-lt:#FFE3EB;
+  --purple:#8B6BFF;
+  --green:#3DD68C;
+  --shadow:5px 5px 0 var(--ink);
+  --shadow-lg:8px 8px 0 var(--ink);
+  --maxw:1020px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--cream);color:var(--ink);
+  font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;
+  line-height:1.9;letter-spacing:.02em;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,.rd{font-family:"M PLUS Rounded 1c","Noto Sans JP",sans-serif}
+a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:60;background:var(--cream);border-bottom:3px solid var(--ink)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:14px;height:66px}
+.nav-logo{font-weight:900;font-size:15px;line-height:1.25}
+.nav-logo span{display:block;font-size:10px;font-weight:700;color:#6E6A5E;letter-spacing:.08em}
+.nav-cta{background:var(--orange);color:#fff;font-weight:900;font-size:13px;padding:11px 22px;border:2.5px solid var(--ink);border-radius:999px;box-shadow:3px 3px 0 var(--ink);white-space:nowrap;transition:.12s}
+.nav-cta:hover{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+
+/* deco */
+.blob{position:absolute;border-radius:50%;border:3px solid var(--ink);z-index:0}
+
+/* hero */
+.hero{background:var(--yellow);border-bottom:3px solid var(--ink);padding:74px 0 84px;position:relative;overflow:hidden}
+.hero .blob.b1{width:150px;height:150px;background:var(--teal);top:-46px;right:-38px}
+.hero .blob.b2{width:80px;height:80px;background:var(--pink);bottom:34px;right:6%}
+.hero .blob.b3{width:44px;height:44px;background:var(--purple);top:118px;right:15%}
+.hero-in{position:relative;z-index:1}
+.mega{font-family:"M PLUS Rounded 1c",sans-serif;font-size:clamp(28px,6.6vw,54px);font-weight:900;line-height:1.4;letter-spacing:0;margin-bottom:30px}
+.badge{display:inline-block;background:var(--ink);color:var(--yellow);font-weight:900;font-size:13px;letter-spacing:.06em;padding:9px 20px;border-radius:999px;margin-bottom:26px;transform:rotate(-2deg)}
+.hero h1{font-size:clamp(30px,7vw,58px);font-weight:900;line-height:1.36;margin-bottom:26px;letter-spacing:0}
+.hero h1 .mute{display:block;font-size:.55em;font-weight:800;margin-bottom:14px;line-height:1.5}
+.hero .mark{position:relative;display:inline-block;z-index:1}
+.hero .mark::after{content:"";position:absolute;left:-4px;right:-4px;bottom:.06em;height:.34em;background:var(--pink);z-index:-1;border-radius:4px}
+.hero .mark2{position:relative;display:inline-block;z-index:1;color:var(--white)}
+.hero .mark2::after{content:"";position:absolute;left:-6px;right:-6px;top:-3px;bottom:-3px;background:var(--green);z-index:-1;border-radius:8px;transform:rotate(-2deg)}
+.hero .mark3{position:relative;display:inline-block;z-index:1;color:var(--ink)}
+.hero .mark3::after{content:"";position:absolute;left:-4px;right:-4px;bottom:.06em;height:.34em;background:var(--purple);z-index:-1;border-radius:4px}
+.hero-lead{font-size:clamp(15px,2.3vw,17px);font-weight:500;max-width:640px;margin-bottom:22px}
+.pricepop{display:inline-flex;align-items:baseline;gap:10px;background:var(--white);border:3px solid var(--ink);border-radius:20px;box-shadow:var(--shadow-lg);padding:18px 30px;margin-bottom:34px;transform:rotate(-1deg)}
+.pricepop .lbl{font-size:14px;font-weight:700}
+.pricepop .num{font-family:"M PLUS Rounded 1c",sans-serif;font-size:clamp(42px,9vw,60px);font-weight:900;line-height:1;color:var(--orange);letter-spacing:0}
+.pricepop .unit{font-size:15px;font-weight:700}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:"M PLUS Rounded 1c",sans-serif;font-weight:900;font-size:16px;padding:17px 36px;border:3px solid var(--ink);border-radius:999px;box-shadow:var(--shadow);transition:.12s}
+.btn:hover{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.btn-1{background:var(--orange);color:#fff}
+.btn-2{background:var(--white);color:var(--ink)}
+.btn-line{background:#06C755;color:#fff;gap:10px}
+.btn-line:hover{background:#05B34D}
+.btn-line svg{flex:none}
+
+/* sections */
+section{padding:76px 0;border-bottom:3px solid var(--ink);scroll-margin-top:66px;position:relative;overflow:hidden}
+.tag{display:inline-block;font-family:"M PLUS Rounded 1c",sans-serif;font-weight:900;font-size:12px;letter-spacing:.14em;padding:6px 16px;border:2.5px solid var(--ink);border-radius:999px;background:var(--white);margin-bottom:18px}
+h2{font-size:clamp(23px,4.9vw,38px);font-weight:900;line-height:1.48;margin-bottom:18px;letter-spacing:0}
+.sec-lead{font-size:15px;font-weight:500;max-width:700px;margin-bottom:42px}
+
+/* problem */
+.s-problem{background:var(--cream)}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.check{display:flex;gap:13px;align-items:flex-start;background:var(--white);border:3px solid var(--ink);border-radius:16px;box-shadow:var(--shadow);padding:18px 20px;font-size:15px;font-weight:500;line-height:1.7}
+.check b{flex:none;width:24px;height:24px;margin-top:2px;background:var(--yellow);border:2.5px solid var(--ink);border-radius:7px;position:relative}
+.check b::after{content:"";position:absolute;left:7px;top:3px;width:6px;height:12px;border:3px solid var(--ink);border-top:0;border-left:0;transform:rotate(42deg)}
+
+/* why */
+.s-why{background:var(--teal)}
+.s-why .tag{background:var(--white)}
+.s-why p.body{font-size:15px;font-weight:500;max-width:720px}
+.s-why p.body+p.body{margin-top:20px}
+.punch{background:var(--ink);color:var(--yellow);border-radius:20px;padding:32px 34px;margin:34px 0;box-shadow:var(--shadow-lg);transform:rotate(-.8deg)}
+.punch p{font-family:"M PLUS Rounded 1c",sans-serif;font-size:clamp(19px,3.6vw,27px);font-weight:900;line-height:1.65}
+
+/* proof */
+.s-proof{background:var(--pink-lt)}
+.stat-hero{position:relative;background:var(--orange);color:#fff;border:3px solid var(--ink);border-radius:26px;box-shadow:var(--shadow-lg);padding:38px 30px 34px;text-align:center;margin-bottom:18px;overflow:hidden}
+.stat-hero::before{content:"MAX";position:absolute;top:8px;right:22px;font-family:"M PLUS Rounded 1c",sans-serif;font-weight:900;font-size:13px;letter-spacing:.1em;background:var(--yellow);color:var(--ink);padding:5px 14px;border:2.5px solid var(--ink);border-radius:999px;transform:rotate(6deg)}
+.stat-hero .n{font-family:"M PLUS Rounded 1c",sans-serif;font-weight:900;font-size:clamp(58px,14vw,116px);line-height:1;letter-spacing:0}
+.stat-hero .n small{font-size:.3em;font-weight:900;margin-left:6px}
+.stat-hero .t{font-size:17px;font-weight:900;margin-top:14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.stat{border:3px solid var(--ink);border-radius:20px;box-shadow:var(--shadow);padding:28px 14px;text-align:center}
+.stat:nth-child(1){background:var(--teal)}
+.stat:nth-child(2){background:var(--yellow)}
+.stat:nth-child(3){background:var(--purple);color:#fff}
+.stat .n{font-family:"M PLUS Rounded 1c",sans-serif;font-size:clamp(34px,7.5vw,54px);font-weight:900;line-height:1.1;letter-spacing:0}
+.stat .n small{font-size:.4em}
+.stat .t{font-size:13px;font-weight:700;margin-top:10px;line-height:1.5}
+.note{font-size:12px;font-weight:500;color:#5C594E;margin-top:20px;line-height:1.85}
+
+/* service */
+.s-service{background:var(--cream)}
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feat{background:var(--white);border:3px solid var(--ink);border-radius:22px;box-shadow:var(--shadow);padding:30px 24px 28px;position:relative}
+.feat .no{position:absolute;top:-18px;left:22px;width:44px;height:44px;display:grid;place-items:center;border:3px solid var(--ink);border-radius:50%;font-family:"M PLUS Rounded 1c",sans-serif;font-weight:900;font-size:18px;color:#fff}
+.feat:nth-child(1) .no{background:var(--orange)}
+.feat:nth-child(2) .no{background:var(--teal);color:var(--ink)}
+.feat:nth-child(3) .no{background:var(--pink)}
+.feat h3{font-size:19px;font-weight:900;line-height:1.55;margin:16px 0 12px}
+.feat p{font-size:14px;font-weight:500;line-height:1.85}
+.quip{display:inline-block;background:var(--pink);color:var(--ink);border:2px solid var(--ink);border-radius:999px;padding:5px 14px;font-size:12px;font-weight:900;margin-bottom:14px}
+.bonus{margin-top:22px;background:var(--green);border:3px solid var(--ink);border-radius:22px;box-shadow:var(--shadow);padding:26px 28px}
+.bonus h3{font-size:16px;font-weight:900;margin-bottom:8px}
+.bonus p{font-size:14px;font-weight:500}
+
+/* price */
+.s-price{background:var(--yellow)}
+.s-price .tag{background:var(--white)}
+.pcard{background:var(--white);border:3px solid var(--ink);border-radius:24px;box-shadow:var(--shadow-lg);padding:36px 32px;max-width:560px}
+.pcard .nm{font-family:"M PLUS Rounded 1c",sans-serif;font-size:17px;font-weight:900}
+.pcard .sub{font-size:13px;font-weight:500;color:#5C594E;margin-bottom:20px}
+.pcard .amt{display:flex;align-items:baseline;gap:8px;margin-bottom:24px}
+.pcard .amt .n{font-family:"M PLUS Rounded 1c",sans-serif;font-size:clamp(48px,10.5vw,72px);font-weight:900;line-height:1;color:var(--orange);letter-spacing:0}
+.pcard .amt .u{font-size:16px;font-weight:700}
+.plist{list-style:none;display:grid;gap:12px;padding-top:24px;border-top:3px dashed var(--ink)}
+.plist li{display:flex;gap:11px;font-size:14px;font-weight:500;line-height:1.7}
+.plist li::before{content:"";flex:none;width:9px;height:9px;margin-top:10px;background:var(--teal);border:2px solid var(--ink);border-radius:50%}
+.compare{margin-top:24px;max-width:560px;background:var(--white);border:3px solid var(--ink);border-radius:20px;padding:22px 24px;font-size:14px;font-weight:500;line-height:1.9}
+.compare b{font-family:"M PLUS Rounded 1c",sans-serif;font-weight:900;font-size:1.3em;background:linear-gradient(transparent 60%,var(--pink) 60%)}
+
+/* fit */
+.s-fit{background:var(--cream)}
+.fits{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.fit{border:3px solid var(--ink);border-radius:22px;box-shadow:var(--shadow);padding:28px 26px}
+.fit.yes{background:var(--teal-lt)}
+.fit.no{background:#EDEBE4}
+.fit h3{font-size:18px;font-weight:900;margin-bottom:18px;display:inline-block;padding:5px 16px;border:2.5px solid var(--ink);border-radius:999px}
+.fit.yes h3{background:var(--green)}
+.fit.no h3{background:#D6D3C9}
+.fit ul{list-style:none;display:grid;gap:12px}
+.fit li{font-size:14px;font-weight:500;line-height:1.75;padding-left:22px;position:relative}
+.fit li::before{position:absolute;left:0;top:0;font-weight:900}
+.fit.yes li::before{content:"○";color:var(--orange)}
+.fit.no li::before{content:"×";color:#8A867A}
+
+/* faq */
+.s-faq{background:var(--white)}
+.faq-i{border:3px solid var(--ink);border-radius:18px;background:var(--cream);margin-bottom:14px;box-shadow:3px 3px 0 var(--ink);overflow:hidden}
+.faq-i summary{cursor:pointer;list-style:none;padding:19px 22px;font-family:"M PLUS Rounded 1c",sans-serif;font-size:15px;font-weight:900;line-height:1.65;display:flex;gap:13px;align-items:flex-start}
+.faq-i summary::-webkit-details-marker{display:none}
+.faq-i summary::before{content:"Q";flex:none;width:26px;height:26px;display:grid;place-items:center;background:var(--yellow);border:2.5px solid var(--ink);border-radius:50%;font-size:13px;font-weight:900;margin-top:1px}
+.faq-i[open] summary{background:var(--yellow)}
+.faq-i .a{padding:16px 22px 20px;font-size:14px;font-weight:500;line-height:1.9;border-top:3px dashed var(--ink)}
+
+/* company */
+.s-company{background:var(--cream)}
+.s-company dl{display:grid;grid-template-columns:150px 1fr;border:3px solid var(--ink);border-radius:18px;overflow:hidden;font-size:14px;font-weight:500;background:var(--white)}
+.s-company dt{background:var(--teal-lt);padding:15px 20px;font-weight:700;border-bottom:2px solid var(--ink)}
+.s-company dd{padding:15px 20px;border-bottom:2px solid var(--ink);border-left:2px solid var(--ink)}
+.s-company dt:last-of-type,.s-company dd:last-of-type{border-bottom:0}
+.s-company dd a{font-weight:700;border-bottom:2px solid var(--orange)}
+
+/* cta */
+.s-cta{background:var(--orange);color:#fff;text-align:center;border-bottom:3px solid var(--ink)}
+.s-cta .blob.c1{width:120px;height:120px;background:var(--yellow);top:-40px;left:-30px}
+.s-cta .blob.c2{width:70px;height:70px;background:var(--teal);bottom:26px;right:8%}
+.s-cta .wrap{position:relative;z-index:1}
+.s-cta .tag{background:var(--white);color:var(--ink)}
+.s-cta p.l{font-size:15px;font-weight:500;max-width:580px;margin:0 auto 34px}
+.s-cta .btns{justify-content:center}
+.s-cta .note{color:#FFEFE6;max-width:580px;margin-left:auto;margin-right:auto}
+
+footer{background:var(--ink);color:#B9B5A6;padding:32px 0;text-align:center;font-size:12px}
+
+@media(max-width:860px){
+  .feats{grid-template-columns:1fr}
+  .fits{grid-template-columns:1fr}
+  .checks{grid-template-columns:1fr}
+  .feat{margin-top:8px}
+}
+@media(max-width:640px){
+  .stats{grid-template-columns:1fr}
+  .stat-hero::before{top:6px;right:14px;font-size:11px;padding:4px 11px}
+}
+@media(max-width:560px){
+  section{padding:58px 0}
+  .hero{padding:52px 0 62px}
+  .btn{width:100%;padding:16px 20px}
+  .s-company dl{grid-template-columns:1fr}
+  .s-company dt{border-bottom:0;padding-bottom:2px}
+  .s-company dd{border-left:0;padding-top:2px}
+  .punch{padding:26px 24px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav-in">
+    <div class="nav-logo">Film倶楽部株式会社<span>SNS内製化支援サービス</span></div>
+    <a class="nav-cta" href="#contact">無料で相談する</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+  <div class="wrap hero-in">
+    <p class="mega">同じ質問を<span class="mark2">3回</span>されても、<br><span class="mark">笑顔で優しく</span>答えます。</p>
+    <div class="badge">SNS内製化支援サービス</div>
+    <h1>
+      <span class="mute">SNSが伸びないのは、<br>センスがないからではありません。</span>
+      「<span class="mark">型</span>」を知らないだけです。
+    </h1>
+    <p class="hero-lead">
+      49投稿で累計4,002万回再生を生んだ制作チームが、御社のSNSを「社内で回せる」状態にします。
+      外注ではなく、自社で続けられる力を身につけるためのサービスです。
+    </p>
+    <div class="pricepop">
+      <span class="lbl">月額</span>
+      <span class="num">10,000</span>
+      <span class="unit">円〜／社</span>
+    </div>
+    <div class="btns">
+      <a class="btn btn-1" href="#contact">無料で相談する</a>
+      <a class="btn btn-2" href="#service">サービス内容を見る</a>
+    </div>
+  </div>
+</header>
+
+<section class="s-problem" id="problem">
+  <div class="wrap">
+    <div class="tag">PROBLEM</div>
+    <h2>こんな状態で、止まっていませんか。</h2>
+    <p class="sec-lead">ひとつでも当てはまるなら、原因は努力量ではありません。</p>
+    <div class="checks">
+      <div class="check"><b></b><span>毎日投稿しているのに、再生数が3桁から増えない</span></div>
+      <div class="check"><b></b><span>そもそも、何が悪いのかが分からない</span></div>
+      <div class="check"><b></b><span>運用代行は月20万円〜。予算が合わない</span></div>
+      <div class="check"><b></b><span>社内にSNSを教えられる人がいない</span></div>
+      <div class="check"><b></b><span>「とりあえず投稿する」ことが目的になっている</span></div>
+      <div class="check"><b></b><span>担当者が異動したら、ノウハウがゼロに戻る</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="s-why" id="insight">
+  <div class="wrap">
+    <div class="tag">WHY</div>
+    <h2>足りないのは「作り方」ではなく、<br>「決め方」です。</h2>
+    <p class="body">
+      編集技術やテロップの入れ方は、調べればいくらでも出てきます。それでも伸びないのは、
+      「誰に、何を、どの順番で見せるか」が決まっていないからです。
+      ここが決まっていない動画は、どれだけ丁寧に作り込んでも人の手は止まりません。
+    </p>
+    <div class="punch">
+      <p>独学とは、正解が分からないまま<br>100本つくり続けることです。</p>
+    </div>
+    <p class="body">
+      このサービスでは、1本目から直せます。あなたの投稿を、実際に数字を出している制作者が見て、
+      どこを変えれば届くのかを具体的に指摘します。センスではなく再現できる「型」として、社内に残していきます。
+    </p>
+  </div>
+</section>
+
+<section class="s-proof" id="proof">
+  <div class="wrap">
+    <div class="tag">PROOF</div>
+    <h2>教えるのは、実際に数字を<br>出している制作チームです。</h2>
+    <p class="sec-lead">評論家ではありません。いまも自分たちで運用し、結果を出し続けている現場のノウハウをそのままお渡しします。</p>
+    <div class="stat-hero">
+      <div class="n">4,002<small>万回</small></div>
+      <div class="t">累計再生数</div>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="n">82<small>万回</small></div><div class="t">1投稿あたりの<br>平均再生数</div></div>
+      <div class="stat"><div class="n">49<small>本</small></div><div class="t">投稿本数</div></div>
+      <div class="stat"><div class="n">2<small>回</small></div><div class="t">TikTokでの<br>トレンド創出</div></div>
+    </div>
+    <p class="note">
+      ※自社運用アカウント「僕らの人生物語」の実績（2026年6月時点）。Instagramフォロワー数1.9万。<br>
+      ※複数のショート動画スクールでの講師実績があります。
+    </p>
+  </div>
+</section>
+
+<section class="s-service" id="service">
+  <div class="wrap">
+    <div class="tag">SERVICE</div>
+    <h2>3つのサポートで、<br>社内に「型」を残します。</h2>
+    <p class="sec-lead">学ぶ・聞く・直す。この3つが揃わないと、SNS運用は続きません。</p>
+    <div class="feats">
+      <div class="feat">
+        <div class="no">1</div>
+        <h3>動画教材 見放題</h3>
+        <p>企画の立て方から撮影・編集・投稿設計まで、実務で使う手順を体系化した教材をいつでも視聴できます。担当者が代わっても、同じ基準で学び直せます。</p>
+      </div>
+      <div class="feat">
+        <div class="no">2</div>
+        <h3>月1回 オンライン勉強会</h3>
+        <p>最新のアルゴリズム傾向や、いま伸びている企画の型を毎月共有します。教材だけでは追えない「今」の情報をアップデートし続けられます。</p>
+      </div>
+      <div class="feat">
+        <div class="no">3</div>
+        <h3>質問し放題のグループチャット</h3>
+        <p>「この冒頭で合っていますか」を、その場で聞けます。回数制限はありません。迷ったまま100本つくる時間を、まるごと短縮できます。</p>
+      </div>
+    </div>
+    <div class="bonus">
+      <h3>継続特典：四半期に1回の壁打ちミーティング</h3>
+      <p>4か月で15本の投稿を達成された企業様には、四半期に1回、個別の壁打ちミーティングをご用意しています。手を動かし続けている企業様を、優先的にサポートします。</p>
+    </div>
+  </div>
+</section>
+
+<section class="s-price" id="price">
+  <div class="wrap">
+    <div class="tag">PRICE</div>
+    <h2>月10,000円から始められます。</h2>
+    <div class="pcard">
+      <div class="nm">SNS内製化支援サービス</div>
+      <div class="sub">1社あたりのご契約です（複数名でのご参加が可能）</div>
+      <div class="amt"><span class="n">10,000</span><span class="u">円 / 月 〜</span></div>
+      <ul class="plist">
+        <li>動画教材 見放題</li>
+        <li>月1回のオンライン勉強会</li>
+        <li>グループチャットでの質問 無制限</li>
+        <li>最低契約期間 6か月／以降は6か月ごとの自動更新（解約は更新の1か月前までにご連絡）</li>
+      </ul>
+    </div>
+    <div class="compare">
+      弊社の<b>SNS運用代行は月20万円〜</b>です。<br>
+      まずはご自分たちで回してみて、それでも手が足りなければ代行に切り替える。その順番で問題ありません。
+    </div>
+  </div>
+</section>
+
+<section class="s-fit" id="fit">
+  <div class="wrap">
+    <div class="tag">FIT</div>
+    <h2>向いている企業と、<br>向いていない企業があります。</h2>
+    <p class="sec-lead">合わない方に契約していただいても、お互いにとって良い結果になりません。先にお伝えします。</p>
+    <div class="fits">
+      <div class="fit yes">
+        <h3>向いています</h3>
+        <ul>
+          <li>自社で手を動かす担当者がいる</li>
+          <li>SNSを一過性ではなく資産にしたい</li>
+          <li>採用や集客に、具体的な課題がある</li>
+          <li>教わりながら改善していきたい</li>
+          <li>まずは小さく始めて判断したい</li>
+        </ul>
+      </div>
+      <div class="fit no">
+        <h3>向いていません</h3>
+        <ul>
+          <li>すべて丸投げしたい（→ <a href="unyodaiko.html" style="font-weight:900;border-bottom:2px solid var(--ink)">運用代行をご案内します</a>）</li>
+          <li>1か月で結果がほしい</li>
+          <li>社内で撮影する時間がまったく取れない</li>
+          <li>成果の保証を求めている</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s-faq" id="faq">
+  <div class="wrap">
+    <div class="tag">FAQ</div>
+    <h2>よくあるご質問</h2>
+    <div style="margin-top:34px">
+      <details class="faq-i">
+        <summary>成果は保証されますか。</summary>
+        <div class="a">いいえ、個別の成果保証はしておりません。本サービスは、御社が自社で運用できるようになるための教材提供と伴走支援です。結果は投稿の継続量と改善の速さに大きく左右されます。確実な成果をお求めの場合は、SNS運用代行をご検討ください。</div>
+      </details>
+      <details class="faq-i">
+        <summary>動画編集の経験がまったくない担当者でも大丈夫ですか。</summary>
+        <div class="a">問題ありません。教材は未経験の方が最初の1本を投稿できるところから構成しています。分からない箇所はグループチャットで何度でもご質問いただけます。</div>
+      </details>
+      <details class="faq-i">
+        <summary>撮影機材は必要ですか。</summary>
+        <div class="a">スマートフォンがあれば始められます。実際、弊社の運用でもスマートフォンでの撮影を多く使っています。機材への投資は、続けられると判断してからで十分です。</div>
+      </details>
+      <details class="faq-i">
+        <summary>業種による向き不向きはありますか。</summary>
+        <div class="a">扱う商材によって企画の型は変わりますが、対応できない業種は基本的にありません。ご相談の際に、御社の業種でどのような企画が成立するかを具体的にお伝えします。</div>
+      </details>
+      <details class="faq-i">
+        <summary>1社で何名まで参加できますか。</summary>
+        <div class="a">ご契約は1社単位です。参加人数の目安についてはご相談時にご案内しますので、社内で担当が複数名いらっしゃる場合はお気軽にお知らせください。</div>
+      </details>
+      <details class="faq-i">
+        <summary>途中で解約できますか。</summary>
+        <div class="a">最低契約期間は6か月です。その後は6か月ごとの自動更新となり、更新の1か月前までにお申し出いただければ解約できます。詳細な条件は契約時に書面でご説明します。</div>
+      </details>
+      <details class="faq-i">
+        <summary>福井県外の企業でも参加できますか。</summary>
+        <div class="a">はい。勉強会・質問対応はすべてオンラインで完結するため、全国どこからでもご参加いただけます。</div>
+      </details>
+      <details class="faq-i">
+        <summary>やってみて難しければ、代行をお願いできますか。</summary>
+        <div class="a">可能です。弊社ではSNS運用代行（月20万円〜）もご提供しています。内製化に取り組んだうえで代行に切り替えると、依頼の精度が上がり、成果も出やすくなります。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="s-company" id="company">
+  <div class="wrap">
+    <div class="tag">COMPANY</div>
+    <h2>運営会社</h2>
+    <div style="margin-top:34px">
+      <dl>
+        <dt>会社名</dt><dd>Film倶楽部株式会社</dd>
+        <dt>代表取締役</dt><dd>金子 真也</dd>
+        <dt>所在地</dt><dd>〒910-0017 福井県福井市文京4丁目2番7号</dd>
+        <dt>設立</dt><dd>2025年6月</dd>
+        <dt>資本金</dt><dd>30万円</dd>
+        <dt>事業内容</dt><dd>SNS運用代行、SNS内製化支援、縦型動画の企画・制作</dd>
+        <dt>コーポレートサイト</dt><dd><a href="http://film-club.info/" target="_blank" rel="noopener">film-club.info</a></dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="s-cta" id="contact">
+  <span class="blob c1"></span><span class="blob c2"></span>
+  <div class="wrap">
+    <div class="tag">CONTACT</div>
+    <h2>まずは、話を聞くところから。</h2>
+    <p class="l">「うちの業種でも成立するのか」だけでも構いません。公式LINEを友だち追加のうえ、そのままメッセージでご相談ください。無理な勧誘は一切いたしません。</p>
+    <div class="btns">
+      <a class="btn btn-line" href="#" data-line><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.48 3 2 6.58 2 11c0 2.61 1.67 4.9 4.24 6.32-.14.5-.9 3.1-.93 3.3 0 0-.02.16.09.22.11.06.24.01.24.01.32-.04 3.7-2.42 4.29-2.84.68.1 1.38.15 2.07.15 5.52 0 10-3.58 10-8S17.52 3 12 3z" fill="currentColor"/></svg>公式LINEで相談する</a>
+      <a class="btn btn-2" href="#" data-form>フォームで相談する</a>
+    </div>
+    <p class="note">※お問い合わせいただいた内容は、ご相談以外の目的には使用いたしません。</p>
+  </div>
+</section>
+
+<footer>© Film倶楽部株式会社</footer>
+
+</body>
+</html>
