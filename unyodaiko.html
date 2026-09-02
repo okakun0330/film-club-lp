@@ -182,6 +182,8 @@ footer{background:var(--ink);color:#8496A8;padding:32px 0;text-align:center;font
   .btn{width:100%;padding:16px 20px}
   .s-company dl{grid-template-columns:1fr}
 }
+/* motion safety net: wins over any stuck/mid-flight JS animation regardless of its state */
+.js-force-visible{opacity:1 !important;transform:none !important}
 </style>
 </head>
 <body>
@@ -414,6 +416,56 @@ footer{background:var(--ink);color:#8496A8;padding:32px 0;text-align:center;font
 </section>
 
 <footer>© Film倶楽部株式会社</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/motion@11.15.0/dist/motion.js"></script>
+<script>
+(function(){
+  // safety net: whatever happens to the animation library, timing, or a
+  // backgrounded/hidden tab, every animated element must end up fully visible.
+  var animatedEls = document.querySelectorAll(
+    '.hero-in > *, #problem .check, #insight .case, #proof .stat-hero, #proof .stats .stat, ' +
+    '#service .plan, #fit .fit, #faq .faq-i, #contact .tag, #contact h2, #contact .l, #contact .btns, #contact .note, #contact .alt'
+  );
+  var forceVisible = function(){
+    // a CSS !important class beats a WAAPI animation regardless of its
+    // play/pause/finished state, so this is safe to call no matter what
+    // the animation library did (or failed to do).
+    animatedEls.forEach(function(el){ el.classList.add('js-force-visible'); });
+  };
+  setTimeout(forceVisible, 2000);
+
+  if (typeof Motion === 'undefined') { forceVisible(); return; }
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) { forceVisible(); return; }
+
+  try {
+    var animate = Motion.animate, inView = Motion.inView, stagger = Motion.stagger;
+
+    // hero entrance — pass a resolved NodeList, not a selector string
+    animate(document.querySelectorAll('.hero-in > *'), {opacity:[0,1], y:[16,0]}, {duration:0.6, delay:stagger(0.1)});
+
+    // scroll-triggered staggered reveals
+    function revealGroup(rootSelector, itemsSelector){
+      document.querySelectorAll(rootSelector).forEach(function(root){
+        var items = itemsSelector ? root.querySelectorAll(itemsSelector) : null;
+        if (!items || !items.length) items = [root];
+        inView(root, function(){
+          animate(items, {opacity:[0,1], y:[20,0]}, {duration:0.5, delay:stagger(0.06)});
+        }, {margin:'-15% 0px -15% 0px'});
+      });
+    }
+
+    revealGroup('#problem .checks', '.check');
+    revealGroup('#insight .cases', '.case');
+    revealGroup('#proof', '.stat-hero, .stats .stat');
+    revealGroup('#service .plans', '.plan');
+    revealGroup('#fit .fits', '.fit');
+    revealGroup('#faq', '.faq-i');
+    revealGroup('#contact .wrap', '.tag, h2, .l, .btns, .note, .alt');
+  } catch(e) {
+    forceVisible();
+  }
+})();
+</script>
 
 </body>
 </html>
